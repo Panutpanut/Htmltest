@@ -62,25 +62,6 @@
             <textarea name="message" rows="4" placeholder="ข้อความของคุณ" required></textarea>
             <button type="submit">ส่งข้อความ</button>
         </form>
-                <div class="summary-message" id="summary-message">
-            โดนกูเล่นรหัสแล้วไอโง่
-        </div>
-    </div>
-
-    <script>
-        function showSummary(event) {
-            // ป้องกันการส่งฟอร์มจริง ๆ
-            event.preventDefault();
-
-            // ซ่อนฟอร์ม
-            document.getElementById("contact-form").style.display = "none";
-
-            // แสดงข้อความสรุป
-            document.getElementById("summary-message").style.display = "block";
-        }
-    </script>
-</body>
-</html>
     </div>
 </body>
 </html>
