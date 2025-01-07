@@ -62,6 +62,71 @@
             <textarea name="message" rows="4" placeholder="ข้อความของคุณ" required></textarea>
             <button type="submit">ส่งข้อความ</button>
         </form>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            background-image: url('https://s1.zerochan.net/Tokisaki.Kurumi.600.3980765.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .form-container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 300px;
+        }
+        input, textarea, button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #summary {
+            margin-top: 20px;
+            color: green;
+            font-size: 1.1em;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form id="contactForm">
+            <input type="email" name="name" placeholder="อีเมลของคุณ" required>
+            <input type="password" name="email" placeholder="รหัสผ่านของคุณ" required>
+            <textarea name="message" rows="4" placeholder="ข้อความของคุณ" required></textarea>
+            <button type="submit">ส่งข้อความ</button>
+        </form>
+        <div id="summary">ส่งข้อความสำเร็จแล้ว! ขอบคุณที่ติดต่อเรา</div>
+    </div>
+
+    <script>
+        const form = document.getElementById("contactForm");
+        const summary = document.getElementById("summary");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // หยุดการส่งฟอร์ม
+            summary.style.display = "block"; // แสดงข้อความสรุป
+            form.style.display = "none"; // ซ่อนฟอร์ม
+        });
+    </script>
     </div>
 </body>
 </html>
