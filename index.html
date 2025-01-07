@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พื้นหลังเป็นรูปภาพ</title>
+    <style>
+        body {
+            margin: 0; /* ลบระยะขอบของหน้า */
+            height: 100vh; /* ความสูงเท่ากับขนาดหน้าจอ */
+            display: flex;
+            align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
+            background-image: url('https://static.wikia.nocookie.net/date-a-live/images/6/6c/Raizen_Uniform_Kurumi.jpg/revision/latest?cb=20140117110038'); 
+            background-size: cover; /* ปรับขนาดรูปให้เต็มหน้า */
+            background-position: center; /* จัดให้อยู่ตรงกลาง */
+            background-repeat: no-repeat; /* ไม่ให้รูปซ้ำ */
+        }
+        h1 {
+            color: white; /* สีตัวอักษร */
+            font-size: 3em; /* ขนาดตัวอักษร */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* ใส่เงาให้ตัวอักษร */
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    </h1></h1>
+</body>
+</html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ฟอร์มส่งข้อความ</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        .form-container {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        input, textarea, button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>ส่งข้อความถึงเรา</h2>
+        <form action="send_email.php" method="POST">
+            <input type="text" name="name" placeholder="ชื่อของคุณ" required>
+            <input type="email" name="email" placeholder="อีเมลของคุณ" required>
+            <textarea name="message" rows="4" placeholder="ข้อความของคุณ" required></textarea>
+            <button type="submit">ส่งข้อความ</button>
+        </form>
+    </div>
+</body>
+</html>
+
