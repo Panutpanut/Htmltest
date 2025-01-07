@@ -46,6 +46,12 @@
         button:hover {
             background-color: #cc0000;
         }
+        #summary {
+            margin-top: 20px;
+            color: green;
+            font-size: 1.2em;
+            display: none; /* ซ่อนข้อความสรุปในตอนแรก */
+        }
     </style>
 </head>
 <body>
@@ -56,6 +62,17 @@
             <textarea name="message" rows="4" placeholder="ข้อความของคุณ" required></textarea>
             <button type="submit">ส่งข้อความ</button>
         </form>
+        <div id="summary">ข้อความของคุณถูกส่งเรียบร้อยแล้ว!</div>
     </div>
+    <script>
+        const form = document.getElementById('contactForm');
+        const summary = document.getElementById('summary');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // หยุดการส่งฟอร์มแบบปกติ
+            summary.style.display = 'block'; // แสดงข้อความสรุป
+            form.style.display = 'none'; // ซ่อนฟอร์ม
+        });
+    </script>
 </body>
 </html>
