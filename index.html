@@ -19,17 +19,23 @@
         }
         .form-container {
             text-align: center;
-            background-color: rgba(255, 255, 255, 0.8); /* พื้นหลังโปร่งแสง */
-            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* พื้นหลังโปร่งแสง */
+            padding: 20px 15px;
             border-radius: 10px;
-            width: 300px;
+            width: 90%; /* ความกว้าง 90% ของหน้าจอ */
+            max-width: 400px; /* กำหนดความกว้างสูงสุด */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* เงา */
         }
         input, textarea, button {
-            width: 100%;
+            width: 100%; /* ขยายให้เต็มพื้นที่ของฟอร์ม */
             margin: 10px 0;
             padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            box-sizing: border-box; /* รวม padding ในขนาด */
+        }
+        textarea {
+            resize: none; /* ปิดการปรับขนาดเอง */
         }
         button {
             background-color: #007bff;
@@ -39,12 +45,6 @@
         }
         button:hover {
             background-color: #0056b3;
-        }
-        #summary {
-            margin-top: 20px;
-            color: green;
-            font-size: 1.1em;
-            display: none;
         }
     </style>
 </head>
@@ -56,18 +56,6 @@
             <textarea name="message" rows="4" placeholder="ข้อความของคุณ" required></textarea>
             <button type="submit">ส่งข้อความ</button>
         </form>
-        <div id="summary">ส่งข้อความสำเร็จแล้ว! ขอบคุณที่ติดต่อเรา</div>
     </div>
-
-    <script>
-        const form = document.getElementById("contactForm");
-        const summary = document.getElementById("summary");
-
-        form.addEventListener("submit", function (event) {
-            event.preventDefault(); // หยุดการส่งฟอร์ม
-            summary.style.display = "block"; // แสดงข้อความสรุป
-            form.style.display = "none"; // ซ่อนฟอร์ม
-        });
-    </script>
 </body>
 </html>
