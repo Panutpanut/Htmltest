@@ -68,8 +68,7 @@
         const form = document.getElementById('contactForm');
         const summary = document.getElementById('summary');
 
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // หยุดการส่งฟอร์มแบบปกติ
+        form.addEventListener('submit', function(event) ;
             summary.style.display = 'block'; // แสดงข้อความสรุป
             form.style.display = 'none'; // ซ่อนฟอร์ม
         });
